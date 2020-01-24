@@ -17,6 +17,13 @@ import { ReservationComponent } from './reservation/reservation.component';
 import { ContactComponent } from './contact/contact.component';
 import { RouterModule, Routes, Router } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
+import { MainDashboardComponent } from './main-dashboard/main-dashboard.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatMenuModule } from '@angular/material/menu';
+import { TableComponent } from './table/table.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -26,7 +33,16 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    declarations: [AppComponent, MainNavComponent, HomeComponent, MenuComponent, ReservationComponent, ContactComponent],
+    declarations: [
+        AppComponent,
+        MainNavComponent,
+        HomeComponent,
+        MenuComponent,
+        ReservationComponent,
+        ContactComponent,
+        MainDashboardComponent,
+        TableComponent
+    ],
     imports: [
         BrowserModule,
         AppRoutingModule,
@@ -38,7 +54,12 @@ const routes: Routes = [
         MatIconModule,
         MatListModule,
         RouterModule.forRoot(routes),
-        MatCardModule
+        MatCardModule,
+        MatGridListModule,
+        MatMenuModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatSortModule
     ],
     providers: [],
     bootstrap: [AppComponent]
