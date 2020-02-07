@@ -23,10 +23,10 @@ export class MainDashboardComponent implements OnInit {
             }
 
             return [
-                { title: 'Month Selected', cols: 2, rows: 1 },
-                { title: 'Vege', cols: 2, rows: 1 },
-                { title: 'Burger', cols: 2, rows: 1 },
-                { title: 'Desert', cols: 2, rows: 1 }
+                { title: 'Month Selected', cols: 2, rows: 1, id: 1 },
+                { title: 'Vege', cols: 2, rows: 1, id: 2 },
+                { title: 'Burger', cols: 2, rows: 1, id: 3 },
+                { title: 'Desert', cols: 2, rows: 1, id: 4 }
             ];
         })
     );
