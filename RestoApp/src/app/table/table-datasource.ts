@@ -16,23 +16,8 @@ const EXAMPLE_DATA: TableItem[] = [
     { id: 1, name: 'Hydrogen', price: '1.99$' },
     { id: 2, name: 'Helium', price: '2.99$' },
     { id: 3, name: 'Lithium', price: '1.99$' },
-    { id: 4, name: 'Beryllium' },
-    { id: 5, name: 'Boron' },
-    { id: 6, name: 'Carbon' },
-    { id: 7, name: 'Nitrogen', price: '3.99$' },
-    { id: 8, name: 'Oxygen' },
-    { id: 9, name: 'Fluorine' },
-    { id: 10, name: 'Neon' },
-    { id: 11, name: 'Sodium', price: '10.99$' },
-    { id: 12, name: 'Magnesium' },
-    { id: 13, name: 'Aluminum' },
-    { id: 14, name: 'Silicon', price: '0.99$' },
-    { id: 15, name: 'Phosphorus' },
-    { id: 16, name: 'Sulfur' },
-    { id: 17, name: 'Chlorine' },
-    { id: 18, name: 'Argon' },
-    { id: 19, name: 'Potassium' },
-    { id: 20, name: 'Calcium' }
+    { id: 4, name: 'Beryllium', price: '1.99$' },
+    { id: 5, name: 'Boron', price: '1.99$' }
 ];
 
 /**

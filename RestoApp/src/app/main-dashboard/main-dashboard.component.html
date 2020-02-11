@@ -23,18 +23,23 @@
                         <h3>{{ vegan.title }}</h3>
                         <span>{{ vegan.description }} </span>
                         <span>{{ vegan.price | currency: 'EUR' }}</span>
+                        <mat-divider></mat-divider>
                     </div>
                 </mat-card-content>
                 <mat-card-content class="dashboard-card-content" *ngIf="card.id === 3">
                     <div *ngFor="let burger of burgers">
                         <h3>{{ burger.title }}</h3>
-                        <p>{{ burger.description }}</p>
+                        <span>{{ burger.description }} </span>
+                        <span>{{ burger.price | currency: 'EUR' }}</span>
+                        <mat-divider></mat-divider>
                     </div>
                 </mat-card-content>
                 <mat-card-content class="dashboard-card-content" *ngIf="card.id === 4">
                     <div *ngFor="let dessert of desserts">
                         <h3>{{ dessert.title }}</h3>
-                        <p>{{ dessert.description }}</p>
+                        <span>{{ dessert.description }} </span>
+                        <span>{{ dessert.price | currency: 'EUR' }}</span>
+                        <mat-divider></mat-divider>
                     </div>
                 </mat-card-content>
             </mat-card>

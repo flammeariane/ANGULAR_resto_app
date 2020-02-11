@@ -24,6 +24,7 @@ import { TableComponent } from './table/table.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { MatDividerModule } from '@angular/material';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -53,13 +54,14 @@ const routes: Routes = [
         MatSidenavModule,
         MatIconModule,
         MatListModule,
-        RouterModule.forRoot(routes),
         MatCardModule,
         MatGridListModule,
         MatMenuModule,
         MatTableModule,
         MatPaginatorModule,
-        MatSortModule
+        MatSortModule,
+        MatDividerModule,
+        RouterModule.forRoot(routes)
     ],
     providers: [],
     bootstrap: [AppComponent]

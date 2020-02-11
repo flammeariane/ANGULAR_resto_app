@@ -8,8 +8,7 @@ export class QuickService {
     burgers: Food[] = [
         { id: 1, title: 'American', description: 'The real Us composition', price: 7.0 },
         { id: 1, title: 'Italian', description: 'The real italian composition', price: 6.0 },
-        { id: 1, title: 'Suisse', description: 'The real Suisse composition', price: 8.0 },
-        { id: 1, title: 'spanish', description: '', price: 10.0 }
+        { id: 1, title: 'Suisse', description: 'The real Suisse composition', price: 8.0 }
     ];
 
     vegans: Food[] = [
