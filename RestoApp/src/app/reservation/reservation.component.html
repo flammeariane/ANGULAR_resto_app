@@ -1,8 +1,28 @@
-<form formGroup="reservationFrom">
+<form [formGroup]="reservationFrom">
     <mat-form-field>
         <mat-label></mat-label>
         <input matInput [matDatepicker]="picker" placeholder="Choisir une date" formControlName="date" />
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker startView="year" [startAt]="date"></mat-datepicker>
+    </mat-form-field>
+
+    <h4>Select time</h4>
+    <mat-form-field>
+        <mat-label> hours choose</mat-label>
+        <mat-select formControlName="time">
+            <mat-option *ngFor="let time of timeOptions" [value]="time">
+                {{ time }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <h4>How many people</h4>
+    <mat-form-field>
+        <mat-label> numbers choose</mat-label>
+        <mat-select formControlName="number">
+            <mat-option *ngFor="let p of numbersOptions" [value]="p">
+                {{ p }}
+            </mat-option>
+        </mat-select>
     </mat-form-field>
 </form>
