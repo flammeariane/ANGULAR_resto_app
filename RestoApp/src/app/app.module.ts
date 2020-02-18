@@ -24,7 +24,7 @@ import { TableComponent } from './table/table.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
-import { MatDividerModule, MatDatepickerModule, MatInputModule, MatNativeDateModule } from '@angular/material';
+import { MatDividerModule, MatDatepickerModule, MatInputModule, MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 const routes: Routes = [
@@ -70,7 +70,7 @@ const routes: Routes = [
         MatNativeDateModule,
         RouterModule.forRoot(routes)
     ],
-    providers: [],
+    providers: [{ provide: MAT_DATE_LOCALE, useValue: 'fr-FR' }],
     bootstrap: [AppComponent]
 })
 export class AppModule {}
