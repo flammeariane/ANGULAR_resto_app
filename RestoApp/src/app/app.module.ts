@@ -24,12 +24,13 @@ import { TableComponent } from './table/table.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
-import { MatDividerModule } from '@angular/material';
-
+import { MatDividerModule, MatDatepickerModule, MatInputModule, MatNativeDateModule } from '@angular/material';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
 const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'menu', component: MenuComponent },
-    { path: 'resevation', component: ReservationComponent },
+    { path: 'reservation', component: ReservationComponent },
     { path: 'contact', component: ContactComponent }
 ];
 
@@ -61,6 +62,12 @@ const routes: Routes = [
         MatPaginatorModule,
         MatSortModule,
         MatDividerModule,
+        ReactiveFormsModule,
+        FormsModule,
+        MatDatepickerModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatNativeDateModule,
         RouterModule.forRoot(routes)
     ],
     providers: [],
