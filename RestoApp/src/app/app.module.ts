@@ -34,11 +34,13 @@ import {
 } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { ScheduleComponent } from './schedule/schedule.component';
 const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'menu', component: MenuComponent },
     { path: 'reservation', component: ReservationComponent },
     { path: 'contact', component: ContactComponent },
+    { path: 'schedule', component: ScheduleComponent },
     { path: '**', component: HomeComponent }
 ];
 
@@ -51,7 +53,8 @@ const routes: Routes = [
         ReservationComponent,
         ContactComponent,
         MainDashboardComponent,
-        TableComponent
+        TableComponent,
+        ScheduleComponent
     ],
     imports: [
         BrowserModule,
