@@ -13,6 +13,9 @@ export class ReservationComponent implements OnInit {
     timeOptions = ['12:00', '12:30', '13:00', '19:00', '19:30', '20:00', '20:30'];
     numbersOptions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
+    client = { firstName: '', Name: '', email: '', phone: '' };
+    isScheduleOk = false;
+
     constructor(private formBuilder: FormBuilder) {}
 
     ngOnInit() {
@@ -25,5 +28,15 @@ export class ReservationComponent implements OnInit {
             time: '',
             number: 1
         });
+    }
+
+    saveDate() {
+        if (this.reservationFrom.valid) {
+            this.isScheduleOk = true;
+        }
+    }
+
+    finalizeReservation(formValue) {
+        console.log(formValue);
     }
 }

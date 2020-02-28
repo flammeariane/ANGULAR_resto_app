@@ -38,7 +38,8 @@ const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'menu', component: MenuComponent },
     { path: 'reservation', component: ReservationComponent },
-    { path: 'contact', component: ContactComponent }
+    { path: 'contact', component: ContactComponent },
+    { path: '**', component: HomeComponent }
 ];
 
 @NgModule({
