@@ -35,6 +35,7 @@ import {
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ScheduleComponent } from './schedule/schedule.component';
+import { HttpClientModule } from '@angular/common/http';
 const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'menu', component: MenuComponent },
@@ -80,6 +81,7 @@ const routes: Routes = [
         MatInputModule,
         MatNativeDateModule,
         MatSelectModule,
+        HttpClientModule,
         RouterModule.forRoot(routes)
     ],
     providers: [{ provide: MAT_DATE_LOCALE, useValue: 'fr-FR' }],

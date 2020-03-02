@@ -1,0 +1,21 @@
+{
+    "version": 1.0,
+    "events": [
+        {
+            "id": 0,
+            "title": "test"
+        },
+        {
+            "id": 1,
+            "title": "cinema"
+        },
+        {
+            "id": 2,
+            "title": "running"
+        },
+        {
+            "id": 3,
+            "title": "gaming"
+        }
+    ]
+}

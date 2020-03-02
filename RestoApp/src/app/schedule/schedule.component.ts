@@ -11,6 +11,7 @@ import { debounceTime, map, tap } from 'rxjs/operators';
 export class ScheduleComponent implements OnInit {
     searchInput = new FormControl();
     searchInputs$: Observable<string> = this.searchInput.valueChanges;
+    result = '';
 
     constructor() {}
 
@@ -22,6 +23,6 @@ export class ScheduleComponent implements OnInit {
                 map(x => x.toLocaleUpperCase()),
                 tap(x => console.log('apres map', x))
             )
-            .subscribe(data => console.log(data.length));
+            .subscribe(data => (this.result = data));
     }
 }
