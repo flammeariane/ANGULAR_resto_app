@@ -1,5 +1,26 @@
-<div>
+<!-- <div>
     <input type="text" [formControl]="searchInput" placeholder="search about ..." />
     <br />
-    {{ result }}
+    {{ result | json }}
+</div> -->
+
+<h2>Evening</h2>
+<form>
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder=" search keyword" [formControl]="searchInput" />
+    </mat-form-field>
+</form>
+
+<div *ngIf="result.length > 0">
+    <mat-card *ngFor="let results of result">
+        <mat-card-header>
+            <mat-card-title>{{ results.title }}</mat-card-title>
+            <mat-card-title>{{ results.date }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <p>
+                {{ results.description }}
+            </p>
+        </mat-card-content>
+    </mat-card>
 </div>

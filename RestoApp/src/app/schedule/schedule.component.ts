@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
-import { debounceTime, map, tap } from 'rxjs/operators';
+import { debounceTime, map, tap, switchMap } from 'rxjs/operators';
+import { ScheduleService } from '../services/schedule.service';
+import { EveningEvent } from '../models/event';
 
 @Component({
     selector: 'app-schedule',
@@ -11,17 +13,16 @@ import { debounceTime, map, tap } from 'rxjs/operators';
 export class ScheduleComponent implements OnInit {
     searchInput = new FormControl();
     searchInputs$: Observable<string> = this.searchInput.valueChanges;
-    result = '';
+    result: EveningEvent[] = [];
 
-    constructor() {}
+    constructor(private scheduleService: ScheduleService) {}
 
     ngOnInit() {
         this.searchInputs$
             .pipe(
-                tap(x => console.log('avant map', x)),
                 debounceTime(1000),
-                map(x => x.toLocaleUpperCase()),
-                tap(x => console.log('apres map', x))
+                switchMap(term => this.scheduleService.search(term)),
+                tap(x => console.log(x))
             )
             .subscribe(data => (this.result = data));
     }
