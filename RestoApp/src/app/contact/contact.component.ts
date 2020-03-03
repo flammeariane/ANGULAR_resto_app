@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
+    displayNumber: string;
+
     standard = {
         firstName: 'benjamin',
         lastName: 'Button',
@@ -31,6 +33,9 @@ export class ContactComponent implements OnInit {
     };
 
     constructor() {}
-
     ngOnInit() {}
+
+    displayzoom(event) {
+        this.displayNumber = event;
+    }
 }

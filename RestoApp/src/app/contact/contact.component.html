@@ -1,5 +1,7 @@
-<p>contact works!</p>
+<p>contact page</p>
 
-<app-phone [user]="standard"></app-phone>
-<app-phone [user]="standard2"></app-phone>
-<app-phone [user]="standard3"></app-phone>
+<app-phone [user]="standard" (zoom)="displayzoom($event)"></app-phone>
+<app-phone [user]="standard2" (zoom)="displayzoom($event)"></app-phone>
+<app-phone [user]="standard3" (zoom)="displayzoom($event)"></app-phone>
+
+<div class="phone" *ngIf="displayNumber">{{ displayNumber }}</div>

@@ -1,3 +1,7 @@
-<p></p>
+<h3>{{ user.role }}</h3>
+<div>{{ user.firstName }} {{ user.lastName }}</div>
 
-{{ user.role }}
+<div>
+    phone: {{ user.phone }}
+    <button (click)="displayNumber()">Zoom</button>
+</div>
