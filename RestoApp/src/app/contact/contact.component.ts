@@ -1,15 +1,36 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-contact',
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+    selector: 'app-contact',
+    templateUrl: './contact.component.html',
+    styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
+    standard = {
+        firstName: 'benjamin',
+        lastName: 'Button',
+        role: 'Somelier',
+        award: '',
+        phone: '02/555.55.00'
+    };
 
-  constructor() { }
+    standard2 = {
+        firstName: 'robin',
+        lastName: 'green',
+        role: 'cuisto',
+        award: '',
+        phone: '02/555.00.55'
+    };
 
-  ngOnInit() {
-  }
+    standard3 = {
+        firstName: 'bob',
+        lastName: 'Eponge',
+        role: 'guard',
+        award: '',
+        phone: '02/555.55.55'
+    };
 
+    constructor() {}
+
+    ngOnInit() {}
 }

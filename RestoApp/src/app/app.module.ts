@@ -36,6 +36,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PhoneComponent } from './phone/phone.component';
 const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'menu', component: MenuComponent },
@@ -55,7 +56,8 @@ const routes: Routes = [
         ContactComponent,
         MainDashboardComponent,
         TableComponent,
-        ScheduleComponent
+        ScheduleComponent,
+        PhoneComponent
     ],
     imports: [
         BrowserModule,
